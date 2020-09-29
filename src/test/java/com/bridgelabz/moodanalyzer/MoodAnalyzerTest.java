@@ -40,4 +40,14 @@ public class MoodAnalyzerTest {
 			System.out.println(e.getMessage());
 		}
 	}
+	
+	@Test
+	public void givenMood_WhenEmpty_InformUser() throws MoodAnalysisException {
+		try {
+			moodObject=new MoodAnalyzer("");
+			assertEquals("HAPPY",moodObject.analyzeMood());
+		} catch (MoodAnalysisException e) {
+			System.out.println(e.getMessage());
+		}
+	}
 }
